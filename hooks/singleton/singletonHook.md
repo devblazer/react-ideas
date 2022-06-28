@@ -1,0 +1,3 @@
+This hook expects a component identifier (see componentIdentifierHook) and an initializer callback.  It is designed to only ever run the initializer once and capture the returned value.  The hook will from there on always return that exact same value and the initializer will never be called again for that componentIdentifier.  
+
+Note that because of the inconsistent way the initializer is run, you cannot use hooks inside it. 

@@ -1,0 +1,1 @@
+This hook is intended to be called once per component.  It will generate an ID for use by various other hook in this collection.  An optional name can be provided.
