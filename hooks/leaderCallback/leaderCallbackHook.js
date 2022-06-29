@@ -4,12 +4,12 @@ const leadersList = new Map();
 
 const useLeaderCallback = (componentIdentifier, callback) => {
   // ref used here instead of memo, since memo value can be forgotten and that would cause a new symbol
-  const leaderIdRef = useRef(Symbol());
+  const hookIdRef = useRef(Symbol());
 
   if (!leadersList.has(componentIdentifier))
-    leadersList.set(componentIdentifier, leaderIdRef.current);
+    leadersList.set(componentIdentifier, hookIdRef.current);
 
-  if (leadersList.get(componentIdentifier) === leaderIdRef.current)
+  if (leadersList.get(componentIdentifier) === hookIdRef.current)
     callback();
 };
 
