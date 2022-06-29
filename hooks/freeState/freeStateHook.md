@@ -11,7 +11,7 @@ const ComponentA = ({data}) => {
   
   return (<Fragment>
     {data.map((item, ind) => {
-      const [state, setState] = useFreeState(componentIdentifier, key, 0); 
+      const [state, setState] = useFreeState(componentIdentifier, ind, 0); 
       
       return (
         <div key={ind} onClick={() => setState(state+1)>
