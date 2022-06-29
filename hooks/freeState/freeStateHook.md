@@ -10,11 +10,11 @@ const ComponentA = ({data}) => {
   const componentIdentifier = useComponentIdentifier();
   
   return (<Fragment>
-    {data.map((item, ind) => {
-      const [state, setState] = useFreeState(componentIdentifier, ind, 0); 
+    {data.map((item) => {
+      const [state, setState] = useFreeState(componentIdentifier, item.key, 0); 
       
       return (
-        <div key={ind} onClick={() => setState(state+1)>
+        <div key={item.key} onClick={() => setState(state+1)>
           {item.label} clicked {state} time(s)
         </div>
       );
